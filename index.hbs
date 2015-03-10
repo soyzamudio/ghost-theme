@@ -1,0 +1,28 @@
+{{!< default}}
+<main class="main_theme" role="main">
+  {{#foreach posts}}
+  <article class="article_theme" role="article" itemscope itemtype="http://schema.org/Article">
+    <header class="postheader_theme">
+      <time class="date_theme" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+        {{date format='dddd DD MMM YYYY'}}
+      </time>
+      <h1 class="posttitle_theme" itemprop="headline">
+        <a href="{{{url}}}" rel="bookmark">{{title}}</a>
+      </h1>
+    </header>
+    <div class="postcontent_theme" itemprop="articleBody">
+      {{content}}
+    </div>
+    {{#if tags}}
+    <div class="posttags_theme">
+      Tags: {{tags separator=" | "}}
+    </div>
+    {{/if}}
+  </article>
+  {{/foreach}}
+  {{#if pagination}}
+  <div class="pagination_theme">
+    {{{pagination}}}
+  </div>
+  {{/if}}
+</main>
