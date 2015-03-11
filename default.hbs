@@ -11,6 +11,8 @@
 
   {{! Styles }}
   <link rel='stylesheet' type="text/css" href="/assets/css/style.css" />
+  <link rel='stylesheet' type="text/css" href="/assets/css/bootstrap/bootstrap.min.css" />
+
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic,700italic|Oxygen:400,700' rel='stylesheet' type='text/css'>
 
   {{! Responsive Meta Tags }}
@@ -21,10 +23,12 @@
   {{ ghost_head }}
 </head>
 <body class="{{body_class}}">
-  <div class="wrapper_theme">
-    {{{body}}}
-  </div>
+
+  {{{body}}}
 
   {{ghost_foot}}
+  <script src='assets/js/main.js'></script>
+  <script src='assets/js/parallax.js'></script>
+  <script src='assets/js/bootstrap/bootstrap.min.js'></script>
 </body>
 </html>
